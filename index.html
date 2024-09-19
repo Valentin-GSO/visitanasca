@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folleto Virtual: Líneas de Nasca</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f4a261, #e76f51, #264653);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      background-image: url('https://example.com/desert-background.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Filtro para mejorar legibilidad */
+      z-index: 1;
+    }
+    nav {
+      background-color: #264653;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 10px 15px;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #e9c46a;
+      border-radius: 5px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      color: #264653;
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    .section p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+    .image {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    .facts {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+    .fact {
+      background-color: #e9c46a;
+      padding: 15px;
+      width: 30%;
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .fact:hover {
+      transform: scale(1.05);
+      background-color: #f4a261;
+      cursor: pointer;
+    }
+    .fact h3 {
+      margin: 10px 0;
+    }
+    .btn {
+      display: block;
+      background-color: #e76f51;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin: 20px 0;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #d63d2e;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #264653;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Las Enigmáticas Líneas de Nasca</h1>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#que-son">¿Qué son?</a>
+    <a href="#historia">Historia</a>
+    <a href="#figuras">Principales Figuras</a>
+    <a href="#visitar">¿Cómo visitarlas?</a>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <div class="container">
+
+    <!-- Sección: ¿Qué son las Líneas de Nasca? -->
+    <div id="que-son" class="section">
+      <h2>¿Qué son las Líneas de Nasca?</h2>
+      <p>Las Líneas de Nasca son impresionantes geoglifos trazados en el desierto de Nasca, Perú. Estas figuras, creadas por la antigua civilización Nasca, solo pueden apreciarse en su totalidad desde el aire y representan una variedad de animales, plantas y formas geométricas.</p>
+      <img src="https://example.com/nasca-lines.jpg" alt="Líneas de Nasca" class="image">
+    </div>
+
+    <!-- Sección: Historia -->
+    <div id="historia" class="section">
+      <h2>Historia y Significado</h2>
+      <p>Las Líneas de Nasca fueron creadas entre el 500 a.C. y el 500 d.C. por la cultura Nasca. Aunque su propósito exacto sigue siendo un misterio, los investigadores creen que pudieron tener un uso religioso o estar vinculadas a observaciones astronómicas.</p>
+    </div>
+
+    <!-- Sección: Principales Figuras -->
+    <div id="figuras" class="section">
+      <h2>Principales Figuras</h2>
+      <p>Algunas de las figuras más conocidas son:</p>
+      <ul>
+        <li><strong>El Colibrí:</strong> Esta figura es una de las más conocidas y posiblemente representa agilidad.</li>
+        <li><strong>La Araña:</strong> Asociada con la fertilidad, tiene un gran significado simbólico.</li>
+        <li><strong>El Mono:</strong> Destaca por su cola en espiral y su gran tamaño.</li>
+      </ul>
+    </div>
+
+    <!-- Sección: Datos Curiosos -->
+    <div class="facts">
+      <div class="fact" onclick="alert('¡Las Líneas de Nasca cubren 450 km²!')">
+        <h3>Área</h3>
+        <p>450 km²</p>
+      </div>
+      <div class="fact" onclick="alert('Algunas líneas miden más de 10 km de longitud!')">
+        <h3>Longitud</h3>
+        <p>Hasta 10 km</p>
+      </div>
+      <div class="fact" onclick="alert('Fueron creadas entre 500 a.C. y 500 d.C.')">
+        <h3>Antigüedad</h3>
+        <p>500 a.C. - 500 d.C.</p>
+      </div>
+    </div>
+
+    <!-- Botón para jugar al minijuego -->
+    <div class="section">
+      <h2>¿Te atreves a un reto?</h2>
+      <p>Descubre las líneas de Nasca a través de este divertido minijuego. ¿Puedes encontrar las figuras ocultas?</p>
+      <a href="minijuego.html" class="btn">¡Juega y descubre las Líneas de Nasca!</a>
+    </div>
+
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2024 Folleto Virtual - Líneas de Nasca</p>
+  </footer>
+
+</body>
+</html>
